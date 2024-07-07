@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,149 +9,153 @@
     <link rel="shortcut icon" href="/chatlock.png">
 </head>
 <style>
-    *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
 
 
-.banner{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px;
-    background: white;
-    transition: 0.5s;
-    min-height: 100vh;
-    position: relative;
-}
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px;
+        background: white;
+        transition: 0.5s;
+        min-height: 100vh;
+        position: relative;
+    }
 
-header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    padding: 20px 100px;
-    justify-content: space-between;
-    align-items: center;
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        padding: 20px 100px;
+        justify-content: space-between;
+        align-items: center;
 
-}
+    }
 
-header .Logo{
-    color: #333;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 700;
-    transition: 0.5s;
-}
-header span{
-    color:blue;
-    font-size: 2.1rem;
-}
+    header .Logo {
+        color: #333;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 700;
+        transition: 0.5s;
+    }
+
+    header span {
+        color: blue;
+        font-size: 2.1rem;
+    }
 
 
-header ul{
-    display: flex;
-    gap: 40px;
-}
+    header ul {
+        display: flex;
+        gap: 40px;
+    }
 
-header ul li {
-    list-style: none;
-}
+    header ul li {
+        list-style: none;
+    }
 
-header ul li a{
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: #333;
-    transition: 0.5s;
-}
+    header ul li a {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #333;
+        transition: 0.5s;
+    }
 
-.content{
-    position: relative;
-    max-width: 700px;
+    .content {
+        position: relative;
+        max-width: 700px;
 
-}
-.content h2{
-    font-size: 5.5em;
-    color: #333;
-    transition: 0.5s;
-    
-}
+    }
 
-.content h2 span{
-   color: blue;
-    
-}
+    .content h2 {
+        font-size: 5.5em;
+        color: #333;
+        transition: 0.5s;
 
-.content p{
-    color: #666;
-    margin: 10px;
-    font-size: 1.2rem;
-    word-spacing: 0.2em;
-    row-gap: 10px;
-    
-    transition: 0.5s;
-}
+    }
 
-.content button{
-    position: relative;
-    background-color: blue;
-    color: white;
-    padding: 15px;
-    outline: none;
-    font-size: 1.2rem;
-    letter-spacing: 0.05em;
-    margin-right: 20px;
-    font-weight: 600;
-    border-radius: 10px;
-    transition: 0.5s;
-    cursor: pointer;
-    margin-top: 5px;
-}
+    .content h2 span {
+        color: blue;
 
-.content button.chat{
-    background-color: transparent;
-    color: #333;
-}
+    }
 
-.dayNight{
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    width: 60px;
-    height: 60px;
-    background-color: #f0f0f0;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    align-items: center;
-    transition: 0.5s;
-    font-size: 2em;
-}
+    .content p {
+        color: #666;
+        margin: 10px;
+        font-size: 1.2rem;
+        word-spacing: 0.2em;
+        row-gap: 10px;
 
-.dayNight ion-icon:nth-child(2),
-.banner.night .dayNight ion-icon:nth-child(1){
-    display: none;
-}
-.banner.night .dayNight ion-icon:nth-child(2){
-    display: block;
-}
-.banner.night{
-background-color: #333;
-}
+        transition: 0.5s;
+    }
 
-.banner.night .dayNight{
-    color: wheat;
-    background-color: #333;
-}
+    .content button {
+        position: relative;
+        background-color: blue;
+        color: white;
+        padding: 15px;
+        outline: none;
+        font-size: 1.2rem;
+        letter-spacing: 0.05em;
+        margin-right: 20px;
+        font-weight: 600;
+        border-radius: 10px;
+        transition: 0.5s;
+        cursor: pointer;
+        margin-top: 5px;
+    }
 
-/* .banner.night header .Logo,
+    .content button.chat {
+        background-color: transparent;
+        color: #333;
+    }
+
+    .dayNight {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        width: 60px;
+        height: 60px;
+        background-color: #f0f0f0;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        align-items: center;
+        transition: 0.5s;
+        font-size: 2em;
+    }
+
+    .dayNight ion-icon:nth-child(2),
+    .banner.night .dayNight ion-icon:nth-child(1) {
+        display: none;
+    }
+
+    .banner.night .dayNight ion-icon:nth-child(2) {
+        display: block;
+    }
+
+    .banner.night {
+        background-color: #333;
+    }
+
+    .banner.night .dayNight {
+        color: wheat;
+        background-color: #333;
+    }
+
+    /* .banner.night header .Logo,
 .content h2,
 .content p,
 .content button.chat,
@@ -158,52 +163,53 @@ header ul li a{
     color: white;
 } */
 
-.banner.night header .Logo,
-.banner.night  .content h2,
-.banner.night  .content p,
-.banner.night  .content button.chat,
-.banner.night header ul li a{
-    color: white;
-}
+    .banner.night header .Logo,
+    .banner.night .content h2,
+    .banner.night .content p,
+    .banner.night .content button.chat,
+    .banner.night header ul li a {
+        color: white;
+    }
 
-.banner.night header span{
-    color: orange;
+    .banner.night header span {
+        color: orange;
 
-}
+    }
 
-.banner.night .content h2 span {
-    color: orange;
+    .banner.night .content h2 span {
+        color: orange;
 
-}
+    }
 
-.banner.night .content button{
-    background-color: orange;
-}
-.banner.night .content button.chat{
-    background-color:white;
-    color: black;
-    transition: 0.5s;
-}
+    .banner.night .content button {
+        background-color: orange;
+    }
 
-
-
+    .banner.night .content button.chat {
+        background-color: white;
+        color: black;
+        transition: 0.5s;
+    }
 </style>
+
 <body>
     <section class="banner">
-        <header >
+        <header>
             <a href="#" class="Logo">Chat<span>Lock</span></a>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">work</a></li>
-              <li><a href="#">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">work</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </header>
 
         <div class="content">
             <h2>I am <span id="text"> ChatLock </span></h2>
-            <p>ChatLock is an innovative social media platform that offers a unique and engaging experience for users to connect, share, and explore content. With its intuitive interface and cutting-edge features, ChatLock aims to redefine the way people interact online.</p>
-            <button>Join  Us</button>
+            <p>ChatLock is an innovative social media platform that offers a unique and engaging experience for users to
+                connect, share, and explore content. With its intuitive interface and cutting-edge features, ChatLock
+                aims to redefine the way people interact online.</p>
+            <button>Join Us</button>
             <button class="chat">Let's Chat</button>
         </div>
 
@@ -211,15 +217,34 @@ header ul li a{
             <ion-icon name="moon-outline"></ion-icon>
             <ion-icon name="sunny-outline"></ion-icon>
         </div>
-    
+
     </section>
-    
 
 
 
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <Script src="/index.js"></Script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <Script src="/index.js">
+
+        let dayNight = document.querySelector(".dayNight");
+        let banner = document.querySelector(".banner");
+
+
+        dayNight.addEventListener("click", () => {
+            banner.classList.toggle("night")
+        })
+
+        let typingEffect = new Typed("#text", {
+            strings: ["ChatLock", "Social Media Platform", "Massanger"],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 50,
+            backDelay: 1000
+
+        });
+    </Script>
 </body>
+
 </html>
